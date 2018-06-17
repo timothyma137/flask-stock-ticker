@@ -10,7 +10,6 @@ psycopg2 = "*"
 whitenoise = "*"
 dj-database-url = "*"
 django = "*"
-numpy = "*"
 
 [dev-packages]
 

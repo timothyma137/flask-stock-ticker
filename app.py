@@ -15,7 +15,7 @@ app.vars={}
 
 @app.route('/')
 def main():
-  return redirect('/symbolpage')
+    return redirect('/symbolpage')
 
 @app.route('/symbolpage', methods=['GET'])
 def retrievesymbol():
