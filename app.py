@@ -43,5 +43,6 @@ def stockgraph():
     thescript, thediv = components(madegraph)
     return render_template('stockgraph.html', script=thescript, div=thediv)
 
-if __name__ == '__main__':
-    app.run(port=33507)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
