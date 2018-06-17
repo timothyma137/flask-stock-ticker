@@ -19,7 +19,7 @@ def main():
 
 @app.route('/symbolpage', methods=['GET'])
 def retrievesymbol():
-    return render_template('symbolpage.html')
+    return render_template('Symbolpage.html')
 
 def retrievestocklink(asymbol):
     mydata = qd.get('WIKI/' + str(asymbol), start_date = '2017-04-01', end_date = '2017-04-30', authtoken='EHRdSDYVebxuv_oz13ut')
