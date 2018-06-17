@@ -36,7 +36,7 @@ def makegraph(asymbol):
     sf.line(x=np.array(gooddf['Date'].values), y=np.array(gooddf['Close'].values),line_width=4, legend='Close')
     return sf
 
-@app.route('/showgraph', methods=['POST'])
+@app.route('/stockgraph', methods=['POST'])
 def stockgraph():
     app.vars['stocksymbol'] = request.form['stocksymbol']
     madegraph=makegraph(app.vars['stocksymbol'])
