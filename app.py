@@ -30,9 +30,10 @@ def retrievestocklink(asymbol):
 def makegraph(asymbol):
     gooddf=retrievestocklink(asymbol)
     sf = figure(title='Stock Price for '+ asymbol +' during April 2017')
-    sf.xaxis.axis_label = 'April 2017'
-    sf.yaxis.axis_label = 'Closing Price'
-    sf.line(x=np.array(gooddf['Date'].values, dtype=np.datetime64), y=np.array(gooddf['Close'].values),line_width=4, legend='Close')
+    sf.xaxis.axis_label = 'April 2017 days'
+    sf.yaxis.axis_label = 'Closing Price ($)'
+    sf.xaxis.major_label_text_color = None
+    sf.line(x=np.array(gooddf['Date'].values), y=np.array(gooddf['Close'].values),line_width=4, legend='Close')
     return sf
 
 @app.route('/showgraph', methods=['POST'])
