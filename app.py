@@ -13,9 +13,9 @@ app = Flask(__name__)
 
 app.vars={}
 
-#@app.route('/')
-#def main():
-#  return redirect('/symbolpage')
+@app.route('/')
+def main():
+  return redirect('/symbolpage')
 
 @app.route('/symbolpage', methods=['GET'])
 def retrievesymbol():
